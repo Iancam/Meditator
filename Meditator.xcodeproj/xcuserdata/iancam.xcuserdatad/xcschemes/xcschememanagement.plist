@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Meditator.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>253A8C491C49B462005CA3D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>253A8C5F1C49B463005CA3D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>253A8C6A1C49B463005CA3D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
