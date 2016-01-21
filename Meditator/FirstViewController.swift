@@ -15,7 +15,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var timeDisplay: UILabel!
     var timer: NSTimer?
     var count: Int = 0
-
+    
     //   MARK: actions
     
     @IBAction func startStopTime(sender: UIButton) {
@@ -27,17 +27,34 @@ class FirstViewController: UIViewController {
             NSRunLoop.currentRunLoop().addTimer(timer!, forMode: NSRunLoopCommonModes)
             
 //            start the timer
-        } else if sender.titleForState(.Normal) == "Stop"{
+        }
+        else if sender.titleForState(.Normal) == "Stop"{
             sender.setTitle("Start", forState: .Normal)
             sender.setTitleColor(UIColor.blueColor(), forState: .Normal)
             timer?.invalidate()
+            let newSession = MeditationSession(date: NSDate(), duration: count)
+            MeditationSession.sessions.append(newSession)
+//            MeditationSession.saveData()
+
+            // send new session to the data bank!!
+            timeDisplay.text = "0:00:00"
             count = 0
+            
 //
 //            log the resulting time
         }
         
     }
-    
+    //MARK: Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print(String(segue))
+        if let tableViewController = segue.destinationViewController as? MeditationSessionTableViewController {
+            tableViewController.tableView.reloadData()
+            print("yes, things are workings")
+        }
+        // Pass the selected object to the new view controller.
+    }
+
     
     // MARK: helper functions
     
@@ -55,11 +72,11 @@ class FirstViewController: UIViewController {
         
     }
 
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
     }
 }
 

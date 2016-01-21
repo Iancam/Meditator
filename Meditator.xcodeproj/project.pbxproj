@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		253A8C4E1C49B462005CA3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C4D1C49B462005CA3D8 /* AppDelegate.swift */; };
 		253A8C501C49B462005CA3D8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C4F1C49B462005CA3D8 /* FirstViewController.swift */; };
-		253A8C521C49B462005CA3D8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C511C49B462005CA3D8 /* SecondViewController.swift */; };
 		253A8C551C49B462005CA3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253A8C531C49B462005CA3D8 /* Main.storyboard */; };
 		253A8C571C49B462005CA3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253A8C561C49B462005CA3D8 /* Assets.xcassets */; };
 		253A8C5A1C49B462005CA3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253A8C581C49B462005CA3D8 /* LaunchScreen.storyboard */; };
 		253A8C651C49B463005CA3D8 /* MeditatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C641C49B463005CA3D8 /* MeditatorTests.swift */; };
 		253A8C701C49B463005CA3D8 /* MeditatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C6F1C49B463005CA3D8 /* MeditatorUITests.swift */; };
+		253A8C821C4CAF80005CA3D8 /* meditationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C811C4CAF80005CA3D8 /* meditationSession.swift */; };
+		253A8C881C4DD824005CA3D8 /* MeditationSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C871C4DD824005CA3D8 /* MeditationSessionTableViewCell.swift */; };
+		253A8C8C1C4EE227005CA3D8 /* MeditationSessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C8B1C4EE227005CA3D8 /* MeditationSessionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		253A8C4A1C49B462005CA3D8 /* Meditator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meditator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253A8C4D1C49B462005CA3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253A8C4F1C49B462005CA3D8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		253A8C511C49B462005CA3D8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		253A8C541C49B462005CA3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		253A8C561C49B462005CA3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		253A8C591C49B462005CA3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		253A8C6B1C49B463005CA3D8 /* MeditatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeditatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		253A8C6F1C49B463005CA3D8 /* MeditatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditatorUITests.swift; sourceTree = "<group>"; };
 		253A8C711C49B463005CA3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		253A8C811C4CAF80005CA3D8 /* meditationSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = meditationSession.swift; sourceTree = "<group>"; };
+		253A8C871C4DD824005CA3D8 /* MeditationSessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationSessionTableViewCell.swift; sourceTree = "<group>"; };
+		253A8C8B1C4EE227005CA3D8 /* MeditationSessionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationSessionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 			children = (
 				253A8C4D1C49B462005CA3D8 /* AppDelegate.swift */,
 				253A8C4F1C49B462005CA3D8 /* FirstViewController.swift */,
-				253A8C511C49B462005CA3D8 /* SecondViewController.swift */,
+				253A8C8B1C4EE227005CA3D8 /* MeditationSessionTableViewController.swift */,
+				253A8C871C4DD824005CA3D8 /* MeditationSessionTableViewCell.swift */,
+				253A8C811C4CAF80005CA3D8 /* meditationSession.swift */,
 				253A8C531C49B462005CA3D8 /* Main.storyboard */,
 				253A8C561C49B462005CA3D8 /* Assets.xcassets */,
 				253A8C581C49B462005CA3D8 /* LaunchScreen.storyboard */,
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				253A8C521C49B462005CA3D8 /* SecondViewController.swift in Sources */,
 				253A8C4E1C49B462005CA3D8 /* AppDelegate.swift in Sources */,
 				253A8C501C49B462005CA3D8 /* FirstViewController.swift in Sources */,
+				253A8C881C4DD824005CA3D8 /* MeditationSessionTableViewCell.swift in Sources */,
+				253A8C8C1C4EE227005CA3D8 /* MeditationSessionTableViewController.swift in Sources */,
+				253A8C821C4CAF80005CA3D8 /* meditationSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

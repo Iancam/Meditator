@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Timer-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Meditator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Timer" id="9pv-A4-QxB" customClass="FirstViewController" customModule="Meditator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -22,7 +23,7 @@
                                 <rect key="frame" x="25" y="80" width="550" height="471"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="c66-Im-E61">
-                                        <rect key="frame" x="165.5" y="0.0" width="219" height="251"/>
+                                        <rect key="frame" x="166" y="0.0" width="219" height="251"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="100"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -55,24 +56,78 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
-        <scene sceneID="wg7-f3-ORb">
+        <!--Sessions-->
+        <scene sceneID="WcM-eJ-kNE">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Meditator" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                <tableViewController title="Sessions" id="4XZ-TB-xf0" customClass="MeditationSessionTableViewController" customModule="Meditator" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vkM-70-QSZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeditationSessionTableViewCell" id="xAF-jA-Qzm" customClass="MeditationSessionTableViewCell" customModule="Meditator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xAF-jA-Qzm" id="mo9-oJ-m4A">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoY-54-b6j">
+                                            <rect key="frame" x="208" y="11" width="184" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="d9D-px-Gxo"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Duration" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvH-xL-aYv">
+                                            <rect key="frame" x="473" y="11" width="119" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="96" id="sH5-i7-hsD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpV-Xa-K83">
+                                            <rect key="frame" x="8" y="10" width="180" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="104" id="I1E-EA-jC9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SoY-54-b6j" firstAttribute="firstBaseline" secondItem="fpV-Xa-K83" secondAttribute="firstBaseline" id="13A-RR-15f"/>
+                                        <constraint firstItem="NvH-xL-aYv" firstAttribute="baseline" secondItem="SoY-54-b6j" secondAttribute="baseline" id="42A-Lt-ZHm"/>
+                                        <constraint firstItem="NvH-xL-aYv" firstAttribute="trailing" secondItem="mo9-oJ-m4A" secondAttribute="trailingMargin" id="4k9-RA-uye"/>
+                                        <constraint firstItem="SoY-54-b6j" firstAttribute="baseline" secondItem="fpV-Xa-K83" secondAttribute="baseline" id="ETk-0g-t4F"/>
+                                        <constraint firstItem="NvH-xL-aYv" firstAttribute="centerY" secondItem="mo9-oJ-m4A" secondAttribute="centerY" id="Ea6-7D-cG1"/>
+                                        <constraint firstItem="fpV-Xa-K83" firstAttribute="top" secondItem="mo9-oJ-m4A" secondAttribute="topMargin" constant="3" id="ItW-Fm-XoL"/>
+                                        <constraint firstItem="SoY-54-b6j" firstAttribute="centerX" secondItem="mo9-oJ-m4A" secondAttribute="centerX" id="OUH-Mt-I12"/>
+                                        <constraint firstItem="fpV-Xa-K83" firstAttribute="leading" secondItem="mo9-oJ-m4A" secondAttribute="leadingMargin" id="j7I-fl-22B"/>
+                                        <constraint firstItem="NvH-xL-aYv" firstAttribute="firstBaseline" secondItem="SoY-54-b6j" secondAttribute="firstBaseline" id="rKI-kG-3Ml"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="SessionDate" destination="fpV-Xa-K83" id="IxD-8H-lYT"/>
+                                    <outlet property="SessionDuration" destination="NvH-xL-aYv" id="Q9I-Ox-tRJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4XZ-TB-xf0" id="07G-BD-aAr"/>
+                            <outlet property="delegate" destination="4XZ-TB-xf0" id="SPP-rK-smD"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="second" id="hDc-cI-Q8W"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rbw-PR-7rP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="750" y="355"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -86,7 +141,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="4XZ-TB-xf0" kind="relationship" relationship="viewControllers" id="zb2-aI-1HX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
