@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  TimerViewController.swift
 //  Meditator
 //
 //  Created by Ian Campbell on 1/15/16.
@@ -8,53 +8,47 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 //    MARK: properties
     
+    @IBOutlet weak var SessionsTableView: UITableView!
     @IBOutlet weak var timeDisplay: UILabel!
     var timer: NSTimer?
     var count: Int = 0
     
     //   MARK: actions
-    
     @IBAction func startStopTime(sender: UIButton) {
         timeDisplay.text = "0:00:00"
         if sender.titleForState(.Normal) == "Start"{
+
+//            start timer view
             sender.setTitle("Stop", forState: .Normal)
             sender.setTitleColor(UIColor.redColor(), forState: .Normal)
+
+//            start timer
             timer = NSTimer(timeInterval: 1.0, target: self, selector: "countUp", userInfo: nil, repeats: true)
             NSRunLoop.currentRunLoop().addTimer(timer!, forMode: NSRunLoopCommonModes)
             
-//            start the timer
         }
         else if sender.titleForState(.Normal) == "Stop"{
+//            change button color and text
             sender.setTitle("Start", forState: .Normal)
             sender.setTitleColor(UIColor.blueColor(), forState: .Normal)
-            timer?.invalidate()
+            
+//            log data
             let newSession = MeditationSession(date: NSDate(), duration: count)
             MeditationSession.sessions.append(newSession)
-//            MeditationSession.saveData()
-
-            // send new session to the data bank!!
+//            show data
+            self.SessionsTableView.reloadData()
+//            reset time
             timeDisplay.text = "0:00:00"
+            timer?.invalidate()
             count = 0
-            
-//
-//            log the resulting time
         }
         
     }
     //MARK: Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print(String(segue))
-        if let tableViewController = segue.destinationViewController as? MeditationSessionTableViewController {
-            tableViewController.tableView.reloadData()
-            print("yes, things are workings")
-        }
-        // Pass the selected object to the new view controller.
-    }
-
     
     // MARK: helper functions
     
@@ -72,11 +66,43 @@ class FirstViewController: UIViewController {
         
     }
 
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.SessionsTableView.reloadData()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+//    MARK: UITableViewDelegate
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        NSLog(String(MeditationSession.sessions.count))
+        return MeditationSession.sessions.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cellIdentifier = "MeditationSessionTableViewCell"
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MeditationSessionTableViewCell
+        print(cell)
+        let meditationSession = MeditationSession.sessions[indexPath.row]
+        
+        cell.SessionDate.text = meditationSession.displayDate
+        cell.SessionDuration.text = meditationSession.displayDuration
+        return cell
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+//        self.SessionsTableView.registerClass(MeditationSessionTableViewCell.self, forCellReuseIdentifier: "MeditationSessionTableViewCell")
     }
 }
 

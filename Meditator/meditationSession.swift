@@ -36,7 +36,7 @@ class MeditationSession: NSObject, NSCoding {
         static let dateKey = "date"
     }
     
-    // MARK: Intialization
+    // MARK: Initialization
     
     init(date: NSDate, duration: Int) {
         self.date = date
