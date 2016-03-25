@@ -51,21 +51,21 @@
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Duration" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ChJ-QS-OvS">
-                                                                    <rect key="frame" x="218" y="11" width="148" height="21"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ChJ-QS-OvS">
+                                                                    <rect key="frame" x="218" y="11" width="136" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="ChJ-QS-OvS" firstAttribute="firstBaseline" secondItem="9DW-UY-Q2L" secondAttribute="firstBaseline" id="3dG-cR-XAm"/>
-                                                                <constraint firstItem="ChJ-QS-OvS" firstAttribute="trailing" secondItem="Rft-CE-16s" secondAttribute="trailingMargin" id="Ebq-UR-E7N"/>
-                                                                <constraint firstItem="ChJ-QS-OvS" firstAttribute="leading" secondItem="9DW-UY-Q2L" secondAttribute="trailing" constant="8" symbolic="YES" id="H52-zS-9Zd"/>
+                                                                <constraint firstAttribute="trailingMargin" secondItem="ChJ-QS-OvS" secondAttribute="trailing" constant="12" id="0IP-tq-UBL"/>
+                                                                <constraint firstItem="ChJ-QS-OvS" firstAttribute="firstBaseline" secondItem="9DW-UY-Q2L" secondAttribute="firstBaseline" id="B2a-Dc-cbO"/>
+                                                                <constraint firstItem="ChJ-QS-OvS" firstAttribute="leading" secondItem="9DW-UY-Q2L" secondAttribute="trailing" constant="31" id="OYW-Mn-Zrg"/>
                                                                 <constraint firstItem="9DW-UY-Q2L" firstAttribute="top" secondItem="Rft-CE-16s" secondAttribute="topMargin" constant="3" id="QVP-0z-yav"/>
                                                                 <constraint firstItem="9DW-UY-Q2L" firstAttribute="centerY" secondItem="Rft-CE-16s" secondAttribute="centerY" id="T2X-3K-hWP"/>
-                                                                <constraint firstItem="ChJ-QS-OvS" firstAttribute="baseline" secondItem="9DW-UY-Q2L" secondAttribute="baseline" id="cWb-Rc-w0B"/>
                                                                 <constraint firstItem="9DW-UY-Q2L" firstAttribute="leading" secondItem="Rft-CE-16s" secondAttribute="leadingMargin" id="eex-3S-Bz0"/>
+                                                                <constraint firstItem="ChJ-QS-OvS" firstAttribute="baseline" secondItem="9DW-UY-Q2L" secondAttribute="baseline" id="hDN-4e-DMN"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
@@ -110,37 +110,41 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Item-->
+        <!--ChartViewController-->
         <scene sceneID="3eK-1t-KSp">
             <objects>
-                <viewController id="ZHF-DZ-VNm" customClass="LineCharViewController" customModule="Meditator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZHF-DZ-VNm" userLabel="ChartViewController" customClass="ChartViewController" customModule="Meditator" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dsZ-Kr-rGQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="FxF-ny-7dD"/>
+                        <viewControllerLayoutGuide type="top" id="w4G-Jv-Mih"/>
+                        <viewControllerLayoutGuide type="bottom" id="xr8-j1-9v3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eid-Rb-KjF">
+                    <view key="view" contentMode="scaleToFill" id="HDc-cQ-TJn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UEW-kN-dI4" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="20" width="560" height="282"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sY1-Vs-VjE" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="20" width="560" height="275"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FxF-ny-7dD" firstAttribute="top" secondItem="UEW-kN-dI4" secondAttribute="bottom" constant="249" id="DTH-1J-cb9"/>
-                            <constraint firstItem="UEW-kN-dI4" firstAttribute="trailing" secondItem="eid-Rb-KjF" secondAttribute="trailingMargin" id="SPb-nz-p46"/>
-                            <constraint firstItem="UEW-kN-dI4" firstAttribute="top" secondItem="dsZ-Kr-rGQ" secondAttribute="bottom" id="geA-vJ-74J"/>
-                            <constraint firstItem="UEW-kN-dI4" firstAttribute="leading" secondItem="eid-Rb-KjF" secondAttribute="leadingMargin" id="grh-Bm-hg4"/>
+                            <constraint firstItem="sY1-Vs-VjE" firstAttribute="trailing" secondItem="HDc-cQ-TJn" secondAttribute="trailingMargin" id="9yK-3Z-O4B"/>
+                            <constraint firstItem="xr8-j1-9v3" firstAttribute="top" secondItem="sY1-Vs-VjE" secondAttribute="bottom" constant="256" id="ChN-qw-7EN"/>
+                            <constraint firstItem="sY1-Vs-VjE" firstAttribute="top" secondItem="w4G-Jv-Mih" secondAttribute="bottom" id="ltJ-y3-a9A"/>
+                            <constraint firstItem="sY1-Vs-VjE" firstAttribute="leading" secondItem="HDc-cQ-TJn" secondAttribute="leadingMargin" id="qLn-vC-Jh5"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Item" id="Q2p-Bk-p5f"/>
+                    <connections>
+                        <outlet property="SessionsLineChartView" destination="sY1-Vs-VjE" id="kpd-xh-z4I"/>
+                        <outlet property="sessionsLineChartView" destination="sY1-Vs-VjE" id="GLf-qN-bBu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DG9-hK-n0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760" y="399"/>
+            <point key="canvasLocation" x="750" y="389"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

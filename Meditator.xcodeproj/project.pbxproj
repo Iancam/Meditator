@@ -16,9 +16,12 @@
 		253A8C701C49B463005CA3D8 /* MeditatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C6F1C49B463005CA3D8 /* MeditatorUITests.swift */; };
 		253A8C821C4CAF80005CA3D8 /* meditationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C811C4CAF80005CA3D8 /* meditationSession.swift */; };
 		253A8C881C4DD824005CA3D8 /* MeditationSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A8C871C4DD824005CA3D8 /* MeditationSessionTableViewCell.swift */; };
-		25B64BBF1CA2342D00686096 /* ios-charts-master in Resources */ = {isa = PBXBuildFile; fileRef = 25B64BBE1CA2342D00686096 /* ios-charts-master */; };
-		25C415921CA235E500410910 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25C4158D1CA235C900410910 /* Charts.framework */; };
-		25C415931CA235E500410910 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25C4158D1CA235C900410910 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		259D5F571CA499BB0044B1D9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259D5F521CA498F70044B1D9 /* Charts.framework */; };
+		259D5F581CA499BB0044B1D9 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259D5F521CA498F70044B1D9 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		259D5F5C1CA4B4EA0044B1D9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259D5F5B1CA4B4EA0044B1D9 /* RealmSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		259D5F5D1CA4B4EA0044B1D9 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259D5F5B1CA4B4EA0044B1D9 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		259D5F5F1CA4B4F20044B1D9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259D5F5E1CA4B4F20044B1D9 /* Realm.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		259D5F601CA4B4F20044B1D9 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 259D5F5E1CA4B4F20044B1D9 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25C4159A1CA32D5600410910 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C415991CA32D5600410910 /* ChartViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,30 +40,30 @@
 			remoteGlobalIDString = 253A8C491C49B462005CA3D8;
 			remoteInfo = Meditator;
 		};
-		25C4158C1CA235C900410910 /* PBXContainerItemProxy */ = {
+		259D5F511CA498F70044B1D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 25C415861CA235C900410910 /* Charts.xcodeproj */;
+			containerPortal = 259D5F4B1CA498F70044B1D9 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
 			remoteInfo = "Charts-iOS";
 		};
-		25C4158E1CA235C900410910 /* PBXContainerItemProxy */ = {
+		259D5F531CA498F70044B1D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 25C415861CA235C900410910 /* Charts.xcodeproj */;
+			containerPortal = 259D5F4B1CA498F70044B1D9 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
 			remoteInfo = "Charts-TV";
 		};
-		25C415901CA235C900410910 /* PBXContainerItemProxy */ = {
+		259D5F551CA498F70044B1D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 25C415861CA235C900410910 /* Charts.xcodeproj */;
+			containerPortal = 259D5F4B1CA498F70044B1D9 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
 			remoteInfo = ChartsTests;
 		};
-		25C415941CA235E500410910 /* PBXContainerItemProxy */ = {
+		259D5F591CA499BB0044B1D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 25C415861CA235C900410910 /* Charts.xcodeproj */;
+			containerPortal = 259D5F4B1CA498F70044B1D9 /* Charts.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
 			remoteInfo = "Charts-iOS";
@@ -68,13 +71,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		25C415961CA235E600410910 /* Embed Frameworks */ = {
+		2566124D1CA496390066F751 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				25C415931CA235E500410910 /* Charts.framework in Embed Frameworks */,
+				259D5F601CA4B4F20044B1D9 /* Realm.framework in Embed Frameworks */,
+				259D5F5D1CA4B4EA0044B1D9 /* RealmSwift.framework in Embed Frameworks */,
+				259D5F581CA499BB0044B1D9 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,8 +102,9 @@
 		253A8C711C49B463005CA3D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		253A8C811C4CAF80005CA3D8 /* meditationSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = meditationSession.swift; sourceTree = "<group>"; };
 		253A8C871C4DD824005CA3D8 /* MeditationSessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditationSessionTableViewCell.swift; sourceTree = "<group>"; };
-		25B64BBE1CA2342D00686096 /* ios-charts-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "ios-charts-master"; path = "../ios-charts-master"; sourceTree = "<group>"; };
-		25C415861CA235C900410910 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		259D5F4B1CA498F70044B1D9 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../../../meditator/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		259D5F5B1CA4B4EA0044B1D9 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		259D5F5E1CA4B4F20044B1D9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		25C415991CA32D5600410910 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +113,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25C415921CA235E500410910 /* Charts.framework in Frameworks */,
+				259D5F5F1CA4B4F20044B1D9 /* Realm.framework in Frameworks */,
+				259D5F5C1CA4B4EA0044B1D9 /* RealmSwift.framework in Frameworks */,
+				259D5F571CA499BB0044B1D9 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +139,8 @@
 		253A8C411C49B462005CA3D8 = {
 			isa = PBXGroup;
 			children = (
-				25C415861CA235C900410910 /* Charts.xcodeproj */,
-				25B64BBE1CA2342D00686096 /* ios-charts-master */,
+				259D5F5E1CA4B4F20044B1D9 /* Realm.framework */,
+				259D5F5B1CA4B4EA0044B1D9 /* RealmSwift.framework */,
 				253A8C4C1C49B462005CA3D8 /* Meditator */,
 				253A8C631C49B463005CA3D8 /* MeditatorTests */,
 				253A8C6E1C49B463005CA3D8 /* MeditatorUITests */,
@@ -153,6 +161,7 @@
 		253A8C4C1C49B462005CA3D8 /* Meditator */ = {
 			isa = PBXGroup;
 			children = (
+				259D5F4B1CA498F70044B1D9 /* Charts.xcodeproj */,
 				253A8C4D1C49B462005CA3D8 /* AppDelegate.swift */,
 				253A8C4F1C49B462005CA3D8 /* TimerViewController.swift */,
 				253A8C871C4DD824005CA3D8 /* MeditationSessionTableViewCell.swift */,
@@ -184,12 +193,12 @@
 			path = MeditatorUITests;
 			sourceTree = "<group>";
 		};
-		25C415871CA235C900410910 /* Products */ = {
+		259D5F4C1CA498F70044B1D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				25C4158D1CA235C900410910 /* Charts.framework */,
-				25C4158F1CA235C900410910 /* Charts.framework */,
-				25C415911CA235C900410910 /* ChartsTests.xctest */,
+				259D5F521CA498F70044B1D9 /* Charts.framework */,
+				259D5F541CA498F70044B1D9 /* Charts.framework */,
+				259D5F561CA498F70044B1D9 /* ChartsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,12 +213,12 @@
 				253A8C461C49B462005CA3D8 /* Sources */,
 				253A8C471C49B462005CA3D8 /* Frameworks */,
 				253A8C481C49B462005CA3D8 /* Resources */,
-				25C415961CA235E600410910 /* Embed Frameworks */,
+				2566124D1CA496390066F751 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				25C415951CA235E500410910 /* PBXTargetDependency */,
+				259D5F5A1CA499BB0044B1D9 /* PBXTargetDependency */,
 			);
 			name = Meditator;
 			productName = Meditator;
@@ -288,8 +297,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 25C415871CA235C900410910 /* Products */;
-					ProjectRef = 25C415861CA235C900410910 /* Charts.xcodeproj */;
+					ProductGroup = 259D5F4C1CA498F70044B1D9 /* Products */;
+					ProjectRef = 259D5F4B1CA498F70044B1D9 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -302,25 +311,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		25C4158D1CA235C900410910 /* Charts.framework */ = {
+		259D5F521CA498F70044B1D9 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 25C4158C1CA235C900410910 /* PBXContainerItemProxy */;
+			remoteRef = 259D5F511CA498F70044B1D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		25C4158F1CA235C900410910 /* Charts.framework */ = {
+		259D5F541CA498F70044B1D9 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 25C4158E1CA235C900410910 /* PBXContainerItemProxy */;
+			remoteRef = 259D5F531CA498F70044B1D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		25C415911CA235C900410910 /* ChartsTests.xctest */ = {
+		259D5F561CA498F70044B1D9 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 25C415901CA235C900410910 /* PBXContainerItemProxy */;
+			remoteRef = 259D5F551CA498F70044B1D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -333,7 +342,6 @@
 				253A8C5A1C49B462005CA3D8 /* LaunchScreen.storyboard in Resources */,
 				253A8C571C49B462005CA3D8 /* Assets.xcassets in Resources */,
 				253A8C551C49B462005CA3D8 /* Main.storyboard in Resources */,
-				25B64BBF1CA2342D00686096 /* ios-charts-master in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,10 +403,10 @@
 			target = 253A8C491C49B462005CA3D8 /* Meditator */;
 			targetProxy = 253A8C6C1C49B463005CA3D8 /* PBXContainerItemProxy */;
 		};
-		25C415951CA235E500410910 /* PBXTargetDependency */ = {
+		259D5F5A1CA499BB0044B1D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Charts-iOS";
-			targetProxy = 25C415941CA235E500410910 /* PBXContainerItemProxy */;
+			targetProxy = 259D5F591CA499BB0044B1D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -511,6 +519,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Meditator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = campbell.Meditator;
@@ -524,6 +536,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Meditator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = campbell.Meditator;

@@ -90,7 +90,6 @@ class TimerViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cellIdentifier = "MeditationSessionTableViewCell"
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MeditationSessionTableViewCell
-        print(cell)
         let meditationSession = MeditationSession.sessions[indexPath.row]
         
         cell.SessionDate.text = meditationSession.displayDate
